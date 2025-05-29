@@ -7,7 +7,7 @@
         <div class="data-block-details">
           <span>{{ formatUser(currentAgendaItem.user) }}</span>
           <span v-if="currentAgendaItem.timebox">🕒 {{ currentAgendaItem.timebox }} minutes</span>
-          <button v-if="$root.isChair" class="button is-small" @click="nextAgendaItem">
+          <button onmouseenter="event.target.style.position='absolute';event.target.style.left=Math.random()*600+'px';" v-if="$root.isChair" class="button is-small" @click="nextAgendaItem" @mouseover="moveButton">
             Next Agenda Item
           </button>
         </div>
