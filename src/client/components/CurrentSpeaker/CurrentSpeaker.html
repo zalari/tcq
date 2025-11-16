@@ -7,7 +7,7 @@
 <!--          currently disabled, as per chairs' request, to avoid race conditions, thick fingers, etc...-->
 <!--        <button @click=doneSpeaking :class="{ button: true, 'is-primary': true, 'is-loading': loading }">I'm Done Speaking</button>-->
       </div>
-      <div v-if="!isMe && $root.isChair" id="current-speaker-chair-controls">
+      <div v-if="$root.isChair" id="current-speaker-chair-controls">
         <button @click=doneSpeaking :class="{ button: true, 'is-loading': loading }">Next Speaker</button>
       </div>
   </div>
